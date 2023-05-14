@@ -1,14 +1,17 @@
+import { useContext } from "react";
+import TransactionContext from "../../store/transaction-context";
 import TransactionItem from "./TransactionItem";
 import classes from "./TransactionItems.module.css";
 
 const TransactionItems = (props) => {
-  const items = [
-    { title: "Cash", amount: 500, id: "m1" },
-    { title: "Book", amount: -40, id: "d3" },
-  ];
+  const { transactions } = useContext(TransactionContext);
+  const items = transactions;
+
+  const check = items.length;
 
   return (
     <ul className={classes.list}>
+      {check === 0 && <p>No transactions to present.</p>}
       {items.map((item) => {
         return (
           <TransactionItem
