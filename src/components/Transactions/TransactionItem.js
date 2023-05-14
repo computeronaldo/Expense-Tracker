@@ -4,7 +4,7 @@ const TransactionItem = (props) => {
   return (
     <li className={classes.display}>
       <span>{props.title}</span>
-      <span>{props.amount}</span>
+      <span>${props.amount}</span>
     </li>
   );
 };
