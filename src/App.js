@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Balance from "./components/Balance";
 import TransactionSummary from "./components/TransactionSummary";
 import TransactionsContainer from "./components/Transactions/TransactionsContainer";
+import TransactionForm from "./components/TransactionForm/TransactionForm";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Balance />
       <TransactionSummary />
       <TransactionsContainer />
+      <TransactionForm />
     </div>
   );
 }
